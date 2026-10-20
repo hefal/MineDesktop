@@ -47,4 +47,4 @@ Claude (two accounts), Codex, Cursor, a smaller Claude model for step-by-step in
 - A stale async result (speech, analysis) must never overwrite the state of a newer one.
 
 ## Open items
-- 2026-10-20: DHCP reservations still user-side; LocalTuya .106 IP conflict; cottage/1-433 offline; TuyaCam Cloud-only; Hue lightstrip entity IDs still English.
+- 2026-10-20: DHCP reservations still user-side; LocalTuya .106 IP conflict; cottage/1-433 offline; TuyaCam Cloud-only; Hue lightstrip entity IDs still English (display names guessed). Stugan cycle goes through `script.stugan_stamning` — do not activate lights at night to verify.

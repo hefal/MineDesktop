@@ -40,7 +40,7 @@ Stock effects (`Aurora`, `Ocean`, `Sunset`) are **not** used for these four look
 | Relax | `script.stugan_koppla_av_animat` | `[28,48,56]`, `[22,55,48]`, `[32,40,58]`, `[18,50,52]` | Spread 2, 5 s. Tungsten, ~56 %. |
 | Moonlight | `script.stugan_mansken_animat` | `[32,70,12]`, `[26,62,8]`, `[36,68,10]`, `[30,75,9]` | Spread 1, 5.5 s. Amber ~2000 K at ~10 %. |
 
-`script.stugan_led_scenfarg` (mood helper, already-on strips only) now starts the same Tapo sequences.
+`script.stugan_led_scenfarg` is now a wrapper for `script.stugan_stamning`. The IKEA cycle and helper dropdown use **static** coordinated palettes (Tapo `Off`, Hue `off`, 2500 K / bri 48 floors, 4 s). These `*_animat` scripts are opt-in only.
 
 ## Nedis / Tuya — HA-driven fades
 
