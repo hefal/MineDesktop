@@ -1,32 +1,21 @@
-# Applied to Home Assistant storage via the config API (2026-10-19).
-# Not a configuration.yaml include. Entity IDs were read from the live registry.
-#
-# Eleven LocalTuya lamps (cloud twins disabled separately):
-#   light.kallare_garage_entre_mid
-#   light.garage_bathroom_spot_kallarbord
-#   light.bathroom_spot_1
-#   light.bathroom_spot_3
-#   light.smart_lighting_tunable_white_and_color_19_smart_lighting_19
-#   light.smart_lighting_tunable_white_and_color_20_smart_lighting_20
-#   light.smart_lighting_tunable_white_and_color_21
-#   light.smart_lighting_tunable_white_and_color_22_smart_lighting_22
-#   light.smart_lighting_tunable_white_and_color_23_smart_lighting_23
-#   light.smart_lighting_tunable_white_and_color_24_smart_lighting_24
-#   light.smart_lighting_tunable_white_and_color_25_smart_lighting_25
-#
-# Whites use color_temp_kelvin only. Tokyo is the only multi-color scene.
-# Klart ljus 2900 K / 100 %. Koppla av 2300 K / 56 %. Månsken 2000 K / 10 %.
+# Live registry notes (2026-10-20). Not a configuration.yaml include.
 
-# scene ids written:
-#   kallaren_klart_ljus_lokal, kallaren_bright_lokal, kallaren_koppla_av_lokal,
-#   kallaren_relax_lokal, kallaren_mansken_lokal, kallaren_tokyo_lokal,
-#   kallaren_allt_av_lokal, kallaren_av_lokal,
-#   kallartrappan_bright, kallartrappan_relax, kallartrappan_moonlight,
-#   kallartrappan_tokyo, kallartrappan_allt_av
-#
-# Stugan strip animation scripts (live HA, not this YAML):
-#   script.stugan_klart_ljus_animat
-#   script.stugan_tokyo_animat
-#   script.stugan_koppla_av_animat
-#   script.stugan_mansken_animat
-# See packages/stugan-led-strip-animations.md
+# Naming: Rum Typ Objekt [position]
+# Entity IDs ASCII (å/ä/ö -> a/a/o). Display names Swedish Title Case.
+
+# LocalTuya lights
+#   light.kallartoalett_spot_handfat   Källartoalett Spot Handfat   kallartoalett   192.168.1.106 (IP conflict)
+#   light.kallartoalett_spot_bord      Källartoalett Spot Bord      kallartoalett   192.168.50.148
+#   light.kallaren_lampa_bord          Källaren Lampa Bord          kallare         192.168.1.34
+#   light.garage_lampa_entre_mitt      Garage Lampa Entré Mitt      garage          192.168.1.106 (IP conflict)
+#   light.kallaren_lampa_19..25        Källaren Lampa 19–25         kallare
+#   light.stugan_led_slinga            Stugan Led Slinga            stugan          192.168.1.53
+#   light.stugan_led_tapo              Stugan Led Tapo              stugan          192.168.1.239
+
+# Källartrappan Hue events
+#   event.kallartrappan_uppe_knapp_1..4
+#   event.kallartrappan_nere_knapp_1..4
+# Cycle: idle/30s -> Ljust, then Tokyo, Koppla av, Månsken. Independent per switch.
+
+# Whites: color_temp_kelvin only. Tokyo is the only multi-color scene.
+# Klart ljus 2900 K / 100 %. Koppla av 2300 K / 56 %. Månsken 2000 K / 10 %.
