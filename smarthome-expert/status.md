@@ -19,6 +19,8 @@
 Reserve on Asus: `.239` Tapo L930, `.53` Nedis, LocalTuya `.3` `.34` `.76` `.88` `.106` `.148` `.202` `.211` `.223` `.248`.
 **Conflict:** Källartoalett Spot Handfat and Garage Lampa Entré Mitt both stored as `192.168.1.106`.
 
+- **Stugan sleep / motion (live, 2026-10-20 night):** Hue, Tapo and Nedis forced off. Tokyo animat stopped. `input_boolean.ljus_stugan_manuellt` is **on** so bed movement does not restore ceiling lights. `automation.stugan_slackning_pausar_rorelseljus` sets that flag whenever Hue room goes off. `automation.stugan_ytterdorr_ateraktiverar_rorelseljus` clears it on `binary_sensor.ytterdorr_stugan` open. IKEA 0 still runs `script.stugan_slack_och_pausa` (now always turns lights off twice). Mirror skips while the flag is on.
+
 ## Open
 - Cottage bulbs and `switch.1_433_switch_1` still unavailable — onboard LocalTuya when they get LAN IPs.
 - TuyaCam stays Cloud (`support_local: false`, no RTSP).
