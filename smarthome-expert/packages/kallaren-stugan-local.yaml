@@ -13,6 +13,9 @@
 #   Rollback snapshot: 1e8d7407 (Stugan scene quality 2026-10-20)
 # Sleep: IKEA 0 / Hue off -> input_boolean.ljus_stugan_manuellt on.
 # Ytterdörr open (binary_sensor.ytterdorr_stugan) clears the flag.
+# Watchdog automation.stugan_sovpaus_haller_slackt turns Hue/Tapo/Nedis/
+# stugan_spot_1 off again if they come on while the flag is on.
+# script.stugan_stamning and *_animat stop at first step during sleep.
 
 # Palettes
 #   Klart ljus  2900 K / 255
