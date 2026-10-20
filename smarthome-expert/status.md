@@ -8,11 +8,8 @@
 - Källartrappan Hue: independent 30 s cycle per switch. Ljust → Tokyo → Koppla av → Månsken. Dim ±30 %. Off on short. Multi-room off on `long_press`.
 - LocalTuya Swedish names + areas. Cloud twins disabled. Tuya Cloud kept for camera, 1-433, offline cottage bulbs, leftover Moln lamps.
 - **Stugan scene quality:** `script.stugan_stamning` is the only writer for the IKEA cycle, helper dropdown, Hue-app named scenes, motion cold-start, and rumsknapp.
-  - Palette is static and in-family: Tapo `effect: Off`, Hue `effect: off` (kills `fire`/`Ocean`).
-  - Shared floors: 2500 K (Tapo cannot go warmer-kelvin below that), brightness 48 (weakest dimmers no longer snap vs Hue moonlight).
-  - Transition 4 s on Hue + Tapo. Nedis has no transition feature (supported_features 4).
-  - Tokyo HS 28/78 @ 176. Avkoppling 2500 K @ 148. Klart ljus 2900 K @ 255. Moonlight 2500 K @ 48. Pines HS 132/52 @ 128.
-  - `*_animat` scripts still exist for explicit play; the cycle does not start them.
+  - **Tokyo** applies Hue integration scene `scene.stugan_stugan_tokyo` (dynamic, brightness 120) on Hue lamps. Tapo `sequence_effect` and Nedis hue fades use red / turquoise / blue / purple / pink at 120. Other moods stay static.
+  - Shared floors on static moods: 2500 K, brightness 48, 4 s. Tapo `effect: Off` and Hue `effect: off` only on those moods, not on Tokyo.
   - Mirror live-follows only when helper is `Hue-färg`, and then with Tapo effect Off.
   - Motion fade uses brightness 48, not 5 %.
   - Dead IDs `light.led_bastu` / `light.stugan_ledslinga_tapo` removed from Stugan scripts, LED scenes, rumsknapp, släck-script, inactivity off, Tuya reconnect condition.

@@ -36,11 +36,11 @@ Stock effects (`Aurora`, `Ocean`, `Sunset`) are **not** used for these four look
 | Look | Script | Tapo sequence (HSV) | Notes |
 | --- | --- | --- | --- |
 | Bright | `script.stugan_klart_ljus_animat` | `[30,22,100]`, `[28,16,88]`, `[32,26,100]`, `[29,18,92]` | Spread 1, 4 s. Warm white around 2900 K, not a rainbow. |
-| Tokyo | `script.stugan_tokyo_animat` | `[28,100,80]`, `[282,96,70]`, `[232,100,55]`, `[268,88,75]`, `[330,78,72]` | Spread 8, 2.8 s. Orange / purple / deep blue / violet / pink. |
+| Tokyo | `script.stugan_tokyo_animat` | `[2,90,58]`, `[178,72,52]`, `[228,88,50]`, `[280,76,56]`, `[328,64,60]` | Spread 12, 5.2 s. Red / turquoise / blue / purple / pink at Hue-scene brightness 120. |
 | Relax | `script.stugan_koppla_av_animat` | `[28,48,56]`, `[22,55,48]`, `[32,40,58]`, `[18,50,52]` | Spread 2, 5 s. Tungsten, ~56 %. |
 | Moonlight | `script.stugan_mansken_animat` | `[32,70,12]`, `[26,62,8]`, `[36,68,10]`, `[30,75,9]` | Spread 1, 5.5 s. Amber ~2000 K at ~10 %. |
 
-`script.stugan_led_scenfarg` is now a wrapper for `script.stugan_stamning`. The IKEA cycle and helper dropdown use **static** coordinated palettes (Tapo `Off`, Hue `off`, 2500 K / bri 48 floors, 4 s). These `*_animat` scripts are opt-in only.
+`script.stugan_stamning` starts `script.stugan_tokyo_animat` on the Tokyo cycle step. Hue lamps keep `scene.stugan_stugan_tokyo`. Static palettes apply only to Klart ljus / Avkoppling / Moonlight / Pines.
 
 ## Nedis / Tuya — HA-driven fades
 
@@ -49,7 +49,7 @@ Because firmware has no scene/music mode, the four `*_animat` scripts fade `ligh
 | Look | Nedis action |
 | --- | --- |
 | Bright | 2900 K, brightness 230 ↔ 255 |
-| Tokyo | HS `[28,100]` → `[282,96]` → `[232,100]` → `[268,88]` → `[330,78]` |
+| Tokyo | HS `[2,90]` → `[178,72]` → `[228,88]` → `[280,76]` → `[328,64]` at brightness 120 |
 | Relax | 2200 K / 128 ↔ 2400 K / 143 |
 | Moonlight | 2000 K, brightness 20 ↔ 32 |
 

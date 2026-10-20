@@ -7,15 +7,16 @@
 #   script.stugan_stamning
 #   automation.stugan_stamning_fran_hjalp
 #   Cycle: Tokyo → Avkoppling → Klart ljus → Moonlight
-#   Floors: 2500 K (Tapo min), brightness 48, transition 4 s
-#   Tapo effect Off, Hue effect off. *_animat scripts are opt-in only.
+#   Tokyo: native Hue scene.stugan_stugan_tokyo on Hue lamps (dynamic
+#   red/blue/purple/pink/turquoise). Tapo sequence + Nedis hue fades
+#   at brightness 120. Other moods stay static coordinated.
 #   Rollback snapshot: 1e8d7407 (Stugan scene quality 2026-10-20)
 
 # Palettes
 #   Klart ljus  2900 K / 255
 #   Avkoppling  2500 K / 148
 #   Moonlight   2500 K / 48
-#   Tokyo       HS 28,78 / 176
+#   Tokyo       Hue integration scene (dynamic). Strips: HS 2/178/228/280/328 @ 120
 #   Pines       HS 132,52 / 128
 
 # Guessed Hue display names (entity_id unchanged)
