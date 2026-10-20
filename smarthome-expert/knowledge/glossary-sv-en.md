@@ -1,6 +1,6 @@
 # Swedish UI terms in this house's dashboard (Swedish → English)
 
-Keep UI strings Swedish. Keep entity IDs, view paths, code, and comments English/ASCII.
+Keep UI strings and device display names Swedish (Rum Typ Objekt, Title Case). Keep entity IDs ASCII (`ö`→`o`), view paths, code, and comments English/ASCII.
 
 | Swedish | English | Where |
 |---|---|---|
