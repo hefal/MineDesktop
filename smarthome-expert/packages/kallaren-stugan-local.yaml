@@ -1,0 +1,49 @@
+# Live registry notes (2026-10-20). Not a configuration.yaml include.
+
+# Naming: Rum Typ Objekt [position]
+# Entity IDs ASCII (å/ä/ö -> a/a/o). Display names Swedish Title Case.
+
+# Stugan scene conductor (live HA, not this file)
+#   script.stugan_stamning
+#   automation.stugan_stamning_fran_hjalp
+#   Cycle: Tokyo → Avkoppling → Klart ljus → Moonlight
+#   Tokyo: native Hue scene.stugan_stugan_tokyo on Hue lamps (dynamic
+#   red/blue/purple/pink/turquoise). Tapo sequence + Nedis hue fades
+#   at brightness 120. Other moods stay static coordinated.
+#   Rollback snapshot: 1e8d7407 (Stugan scene quality 2026-10-20)
+
+# Palettes
+#   Klart ljus  2900 K / 255
+#   Avkoppling  2500 K / 148
+#   Moonlight   2500 K / 48
+#   Tokyo       Hue integration scene (dynamic). Strips: HS 2/178/228/280/328 @ 120
+#   Pines       HS 132,52 / 128
+
+# Guessed Hue display names (entity_id unchanged)
+#   light.hue_lightstrip_plus_5    Stugan Led Slinga Höger Fram
+#   light.hue_lightstrip_plus_6_2  Stugan Led Slinga Vänster Fram
+#   light.hue_lightstrip_plus_2_4  Stugan Led Bänk
+#   light.hue_lightstrip_plus_2_5  Stugan Led Slinga 2
+#   light.hue_lightstrip_plus_3    Stugan Led Slinga 3
+#   light.hue_lightstrip_plus_4    Stugan Led Slinga 4
+#   light.hue_lightstrip_plus_6    Stugan Led Fönster Kortsida
+#   light.hue_gradient_lightstrip_1    Stugan Led Gradient Tv
+#   light.hue_gradient_lightstrip_1_2  Stugan Led Gradient
+#   light.hue_color_spot_3         Stugan Spot Gu10
+#   light.garage_1                 Stugan Lampa Blomma   glashus
+#   light.garage_2                 Stugan Lampa Garage   garage
+#   light.garage_3                 Stugan Lampa Skärm    stugan
+
+# LocalTuya lights
+#   light.kallartoalett_spot_handfat   Källartoalett Spot Handfat   kallartoalett   192.168.1.106 (IP conflict)
+#   light.kallartoalett_spot_bord      Källartoalett Spot Bord      kallartoalett   192.168.50.148
+#   light.kallaren_lampa_bord          Källaren Lampa Bord          kallare         192.168.1.34
+#   light.garage_lampa_entre_mitt      Garage Lampa Entré Mitt      garage          192.168.1.106 (IP conflict)
+#   light.kallaren_lampa_19..25        Källaren Lampa 19–25         kallare
+#   light.stugan_led_slinga            Stugan Led Slinga            stugan          192.168.1.53
+#   light.stugan_led_tapo              Stugan Led Tapo              stugan          192.168.1.239
+
+# Källartrappan Hue events
+#   event.kallartrappan_uppe_knapp_1..4
+#   event.kallartrappan_nere_knapp_1..4
+# Cycle: idle/30s -> Ljust, then Tokyo, Koppla av, Månsken. Independent per switch.
